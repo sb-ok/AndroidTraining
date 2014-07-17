@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.content.Intent;
 
 
 public class MainActivity extends Activity {
@@ -60,5 +61,11 @@ public class MainActivity extends Activity {
                 mTextViewInfo.setText(R.string.yellowLight);
                 break;
         }
+    }
+
+    public void openAboutPage(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(intent);
     }
 }

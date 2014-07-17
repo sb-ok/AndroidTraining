@@ -8,7 +8,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
     android:clickable="false"
-    android:background="@color/redColor"
+    android:background="@color/greenColor"
     android:id="@+id/relativeLayout">
 
     <Button

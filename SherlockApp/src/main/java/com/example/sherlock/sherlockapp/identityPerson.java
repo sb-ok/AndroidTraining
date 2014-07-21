@@ -1,24 +1,22 @@
 package com.example.sherlock.sherlockapp;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
-public class MainActivity extends Activity {
+import com.example.sherlock.sherlockapp.R;
 
-    static final private int CHOOSE_THIEF = 0;
-    TextView tvInfo;
+public class IdentityPerson extends ActionBarActivity {
+
+    public final static String THIEF = "com.example.sherlock.THIEF";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        tvInfo = (TextView) findViewById(R.id.tvInfo);
+        setContentView(R.layout.activity_identity_person);
     }
 
 
@@ -41,23 +39,25 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick(View v)
+    public void onRadioClick(View v)
     {
-        Intent questionIntent = new Intent(MainActivity.this, IdentityPerson.class);
-        startActivityForResult(questionIntent, CHOOSE_THIEF);
-    }
+        Intent answerIntent = new Intent();
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == CHOOSE_THIEF){
-            if (requestCode == RESULT_OK){
-                String thiefName = data.getStringExtra(IdentityPerson.THIEF);
-                tvInfo.setText(thiefName);
-            }else {
-                tvInfo.setText("");
-            }
+        switch (v.getId()){
+            case R.id.radioDog:
+                answerIntent.putExtra(THIEF, "Это все бодрый пес");
+                break;
+            case R.id.radioCrow:
+                answerIntent.putExtra(THIEF, "Сперла паршивая ворона");
+                break;
+            case R.id.radioCat:
+                answerIntent.putExtra(THIEF, "Василий постарался!");
+                break;
+            default:
+                break;
         }
+
+        setResult(RESULT_OK, answerIntent);
+        finish();
     }
 }

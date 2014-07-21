@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Sherlock</string>
+    <string name="app_name">Шерлок</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_identity_person">Кто украл?</string>
+    <string name="who">Кто спер колбасу?</string>
+    <string name="makeAChoice">Сделать выбор</string>
+    <string name="icon">icon</string>
+    <string name="catName">Кошарка Василий</string>
+    <string name="dogName">Бодрый пес</string>
+    <string name="crowName">Наглая ворона</string>
+    <string name="makeChoiseTxt">Выберите правильный ответ</string>
 
 </resources>

@@ -1,12 +1,10 @@
 package com.example.mamba.m01d04;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.content.Intent;
@@ -23,7 +21,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         mRelativeLayout = (RelativeLayout)findViewById(R.id.relativeLayout);
-        mTextViewInfo = (TextView)findViewById(R.id.textView);
+        mTextViewInfo = (TextView)findViewById(R.id.targetName);
     }
 
 
@@ -66,6 +64,12 @@ public class MainActivity extends Activity {
     public void openAboutPage(View view)
     {
         Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickMessenger(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
         startActivity(intent);
     }
 }

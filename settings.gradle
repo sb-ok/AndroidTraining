@@ -1,1 +1,1 @@
-include ':app', ':SherlockApp'
+include ':app', ':SherlockApp', ':OrientationApp'

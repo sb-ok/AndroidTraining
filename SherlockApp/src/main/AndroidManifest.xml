@@ -19,11 +19,7 @@
         </activity>
         <activity
             android:name=".IdentityPerson"
-            android:label="@string/title_activity_identity_person"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sherlock.sherlockapp.MainActivity" />
+            android:label="@string/title_activity_identity_person">
         </activity>
     </application>
 

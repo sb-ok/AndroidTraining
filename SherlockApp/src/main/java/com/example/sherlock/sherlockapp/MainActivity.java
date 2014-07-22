@@ -52,11 +52,11 @@ public class MainActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == CHOOSE_THIEF){
-            if (requestCode == RESULT_OK){
+            if (resultCode == RESULT_OK){
                 String thiefName = data.getStringExtra(IdentityPerson.THIEF);
                 tvInfo.setText(thiefName);
             }else {
-                tvInfo.setText("");
+                tvInfo.setText("лажа");
             }
         }
     }

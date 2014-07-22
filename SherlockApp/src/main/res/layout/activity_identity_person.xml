@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:text="@string/crowName"
             android:id="@+id/radioCrow"
-            android:onClick="onRadioClick" />
+            android:onClick="onRadioClick"
+            android:checked="false" />
 
         <RadioButton
             android:layout_width="wrap_content"

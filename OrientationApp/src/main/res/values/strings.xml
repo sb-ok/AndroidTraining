@@ -4,5 +4,7 @@
     <string name="app_name">Orientation</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="oriantationTag">Ориентация экрана:</string>
+    <string name="changeOrientation">Сменить ориентацию экрана</string>
 
 </resources>
